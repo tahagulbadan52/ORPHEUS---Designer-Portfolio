@@ -2,11 +2,244 @@
 font-family: 'Cinzel', serif;
 font-family: 'Montserrat', sans-serif;
 */
+:root {
+    --ff-primary: 'Cinzel', serif;
+    --ff-secondary: 'Montserrat', sans-serif;
+
+    --fs-small: .9rem;
+    --fs-medium: 1.15rem;
+    --fs-large: 1.3rem;
+    --fs-xlarge: 60px;
+
+    --container-max-width: 1496px;
+    --container-width: calc(100% - 4rem);
+
+    --bg-dark: #050607;
+    --bg-light: #EFF3FB;
+
+    --text-dark: var(--bg-dark);
+    --text-light: var(--bg-light);
+}
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--ff-primary);
     background-color: #050607;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+section[class*="-section"] {
+    margin-block: 6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+/* --- Utility Classes --- */
+
+.container {
+    max-width: var(--container-max-width);
+    width: var(--container-width);
+    margin-inline: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 79px;
+    align-items: center;
+}
+
+.flex-container-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.text-normal {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-medium);
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.text-title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-large);
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(295.38deg, #C5FFA2 4.89%, #BF841A 50.44%, #FFCD74 95.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-header {
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 800;
+    font-size: var(--fs-xlarge);
+    line-height: 77px;
+    letter-spacing: -0.01em;
+    background: linear-gradient(295.38deg, #C5FFA2 4.89%, #BF841A 50.44%, #FFCD74 95.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient {
+    background: linear-gradient(295.38deg, #C5FFA2 4.89%, #BF841A 50.44%, #FFCD74 95.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-right: 3rem;
+    transition: all ease-in;
+}
+
+.btn:hover {
+    font-weight: 500;
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+.btn-primary {
+    background: linear-gradient(295.38deg, #C5FFA2 4.89%, #BF841A 50.44%, #FFCD74 95.06%);
+    
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #efbb5e;
+    border-radius: 3px;
+    color: #EFF3FB;
+} 
+
+.text-title-btn {
+    font-family: var(--ff-secondary);
+    color: var(--text-light);
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.text-title-btn:hover {
+    font-weight: 500;
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+.text-title-pipe{
+    height: 42px;
+    width: 3px;
+    /* background: radial-gradient(rgba(242, 187, 90, 0.8768) 0%, #FFE195 47.11%,rgba(191, 122, 0, 0.75) 62.27%, rgba(15, 18, 24, 0)  100%); */
+    background: linear-gradient(0deg, rgba(242, 186, 90, 0) 0%, #75510e 50.44%, #ffcc7400 100%);
+    display: inline-block;
+    margin-inline: 1rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-block: 1.5rem;
+}
+
+.section-header.end {
+    justify-content: end;
+}
+
+
+
+
+/* --- Navigation Section --- */
+
+.nav-section {
+    padding-block: 1rem;
+    border-bottom: 1px solid #101822;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav-btn {
+    font-size: var(--fs-small);
+    font-family: var(--ff-secondary);
+    color: var(--text-light);
+}
+
+.nav-btn:hover {
+    font-weight: 500;
+}
+
+
+
+
+
+
+/* --- Hero Section --- */
+
+.hero-section {
+    height: 80vh;
+    padding-block: 2rem;
+}
+
+.hero__textarea {
+    max-width: 552px;
+}
+
+.hero__title > span {
+    font-weight: 900;
+    letter-spacing: .55em;
+}
+
+.hero__img {
+    max-width: 855px;
+}
+
+.hero__img > img {
+    width: 100%;
+}
+
+
+
+
+/* --- NFT Section --- */
+
+.nft__card {
+    position: relative;
+}
+
+.nft__lable {
+    width: 100%;
+    padding: 0.8rem;  
+    background: linear-gradient(90deg, rgba(9, 11, 14, 0.81) 19.79%, rgba(9, 11, 14, 0) 97.4%);
+    position: absolute;
+    bottom: 0;
+}
+
+
 
 .section {
     margin: 25px auto;
@@ -52,34 +285,13 @@ body {
     font-weight: 400;
     font-size: 22px;
     line-height: 50px;
-    color: #EFF3FB;
+    color: var(--text-light);
 }
 
 .buttons-container {
     display: flex;
     gap: 25px;
 }
-
-.btn {
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px 20px;
-    font-size: 18px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.btn-primary {
-    background: linear-gradient(295.38deg, #C5FFA2 4.89%, #BF841A 50.44%, #FFCD74 95.06%);
-    
-}
-
-.btn-secondary {
-    box-sizing: border-box;
-    background-color: transparent;
-    border: 2px solid #efbb5e;
-    border-radius: 3px;
-} 
 
 .btn-secondary--text {
     background: linear-gradient(295.38deg, #C5FFA2 4.89%, #BF841A 50.44%, #FFCD74 95.06%);
@@ -162,4 +374,17 @@ body {
     background: linear-gradient(90deg, rgba(9, 11, 14, 0.81) 19.79%, rgba(9, 11, 14, 0) 97.4%);
     position: absolute;
     bottom: 0;
+}
+
+
+
+/* --- Contribution Section --- */
+
+.contribution-card {
+    background-color: #07090C;
+}
+
+.contribution-card__textarea {
+    margin-left: auto;
+    max-width: 50rem;
 }

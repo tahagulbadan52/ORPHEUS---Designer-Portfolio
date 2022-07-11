@@ -8,43 +8,72 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;800&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;800;900&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="section section__hero">
-        <div class="section__hero--text">
-            <h1>Yet the story of <br><span>ORPHEUS</span></h1>
-            <p>Product & Graphic Designer, with experience in delivering end-to-end UX/UI design for software products.</p>
-            <div class="buttons-container">
-                <button class="btn btn-secondary"><span class="btn-secondary--text">Works ⌵</button>
-                <button class="btn btn-primary">Free Stuff</button>
+    <header class="nav-section">
+        <nav class="container flex-container">
+            <div class="logo"><img src="./assets/logo-dark.png" alt="logo"></div>
+            <ul class="flex-container">
+                <li><a href="#" class="nav-btn">Works</a></li>
+                <li><a href="#" class="nav-btn">Contribution</a></li>
+                <li><a href="#" class="nav-btn">Community</a></li>
+                <li><a href="#" class="nav-btn">Get in Touch</a></li>
+                <li><a href="#" class="nav-btn"><img src="./assets/sun.svg" alt="switch to light mode"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="container flex-container">
+                <div class="hero__textarea flex-container-col">
+                    <h1 class="hero__title text-header">Yet the story of <br><span>ORPHEUS</span></h1>
+                    <p class="text-normal">Product & Graphic Designer, with experience in delivering end-to-end UX/UI design for software products.</p>
+                    <div class="hero__buttons">
+                        <button class="btn btn-secondary">Works ⌵</button>
+                        <button class="btn btn-primary">Free Stuff</button>
+                    </div>
+                </div>
+                <div class="hero__img"><img src="/assets/hero - dark.png" alt="nft-model"></div>
             </div>
-        </div>
-        <div class="section__hero--image">
-            <img src="/assets/hero - dark.png" alt="">
-        </div>
-    </div>
-    <div class="section section__works">
-        <h3 class="section__works--title">Works</h3>
-        <div class="sub-header-bar">
-            <div class="main-text">Recent NFT</div>
-            <div class="sub-text">View More</div>
-        </div>
-        <div class="nft-container">
-            <div class="nft-card">
-                <img class="nft-card-img" src="/assets/nft1.png" alt="">
-                <div class="img-text">Relics Of A Mortal Past 1 - NFT</div>
+        </section>
+        <section class="nft-section container ">
+            <div class="section-header end">
+                <h3 class="text-title">Recent NFT</h3>
+                <div class="text-title-pipe"></div>
+                <div class="text-title-btn">View More</div>
             </div>
-            <div class="nft-card">
-                <img class="nft-card-img" src="/assets/nft2.png" alt="">
-                <div class="img-text">Relics Of A Mortal Past 1 - NFT</div>
+            <div class="flex-container">
+                <div class="nft__card">
+                    <img class="nft-card-img" src="/assets/nft1.png" alt="">
+                    <h4 class="nft__lable text-normal">Relics Of A Mortal Past 1 - NFT</h4>
+                </div>
+                <div class="nft__card">
+                    <img class="nft-card-img" src="/assets/nft1.png" alt="">
+                    <h4 class="nft__lable text-normal">Relics Of A Mortal Past 1 - NFT</h4>
+                </div>
+                <div class="nft__card">
+                    <img class="nft__img" src="/assets/nft1.png" alt="">
+                    <h4 class="nft__lable text-normal">Relics Of A Mortal Past 1 - NFT</h4>
+                </div>
             </div>
-            <div class="nft-card">
-                <img class="nft-card-img" src="/assets/nft3.png" alt="">
-                <div class="img-text">Relics Of A Mortal Past 1 - NFT</div>
+        </section>
+        <section class="contribution-section ">
+            <div class="section-header container">
+                <h3 class="text-title">Contribution NFT</h3>
+                <div class="text-title-pipe"></div>
+                <div class="text-title-btn">View More</div>
             </div>
-        </div>
-    </div>
+            <div class="contribution-card container">
+                <div class="flex-container-col contribution-card__textarea">
+                    <div class="text-title">3D Greek Statue Pack</div>
+                    <div class="text">Over 200 Greek Style Sculpture</div>
+                    <button class="btn btn-primary">Download</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
 
 </body>
 </html>
